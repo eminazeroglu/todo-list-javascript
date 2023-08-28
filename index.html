@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .active {
+                background-color: #8F8F8F;
+                color: #fff !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="w-[390px] mx-auto my-[20px] space-y-[15px]">
+            <form>
+                <div class="flex items-center border">
+                    <input id="formText" type="text" class="h-[40px] flex-1 focus:outline-none px-[10px]" />
+                    <button onclick="" id="btnAdd" class="h-[40px] w-[40px] text-white bg-green-500">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="flex items-center justify-between space-x-[9px]">
+                <button data-value="all" class="btnTab border border-[#E1E1E1] flex-1 h-[30px] active rounded-[6px] text-[#5C5C5C]">All</button>
+                <button data-value="completed" class="btnTab border border-[#E1E1E1] flex-1 h-[30px] rounded-[6px] text-[#5C5C5C]">Complated</button>
+                <button data-value="pending" class="btnTab border border-[#E1E1E1] flex-1 h-[30px] rounded-[6px] text-[#5C5C5C]">Pending</button>
+            </div>
+
+            <div class="flex flex-col space-y-[5px]" id="items-content"></div>
+        </div>
+
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
